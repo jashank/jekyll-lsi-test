@@ -5,7 +5,7 @@
 $corpus = File.readlines("corpus.txt").map {|i| i.chomp}
 
 def corpustext
-  rand(10).times.map do |c|
+  rand(50).times.map do |c|
     $corpus.sample(rand(25)).join(' ').capitalize
   end.join('. ')
 end
@@ -29,4 +29,4 @@ def entry
   end
 end
 
-100.times.map { entry }
+1000.times.map { entry }
